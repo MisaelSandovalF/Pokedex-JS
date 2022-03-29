@@ -1,0 +1,772 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  background-position: left left;
+
+  background-image: url(../img/background1.jpg);
+}
+
+/********
+SECTION POKEDEX
+********/
+.section-pokedex {
+  width: 53%;
+  height: 50vw;
+
+  margin: 0 auto;
+}
+.section-pokedex h1 {
+  text-align: center;
+
+  font-size: 5vw;
+  font-family: "Pokémon";
+
+  color: #ffcb05;
+  -webkit-text-stroke: 5px #003a70;
+}
+/********
+CONTENEDOR POKEDEX
+********/
+.contenedor-pokedex {
+  height: 70%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 51% 1fr 45%;
+}
+/********
+POKEDEZ IZQUIERDO
+********/
+.parte-izquierda {
+  display: flex;
+  position: relative;
+
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 1vw;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 0.2vw;
+  background-color: brown;
+}
+.parte-izquierda .mitad-izquierda {
+  display: flex;
+  position: absolute;
+  width: 27vw;
+  height: 99%;
+  left: 0.5vw;
+
+  border-bottom-left-radius: 2vw;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  background-color: red;
+}
+/********
+POKEDEZ IZQUIERDO PARTE SUPERIOR
+********/
+.parte-izquierda .parte-superior-izquierda {
+  display: flex;
+  position: absolute;
+  width: 27.59vw;
+  height: 15%;
+  left: 1vw;
+
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 1vw;
+  background-color: red;
+}
+.contenedor-led {
+  display: flex;
+  position: absolute;
+  width: 24%;
+  height: 100%;
+}
+.parte-izquierda .parte-superior-izquierda .foco {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+
+  border-radius: 50%;
+  background-color: white;
+}
+.parte-izquierda .parte-superior-izquierda .foco .azul-fuerte {
+  display: flex;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 4%;
+  left: 8%;
+  border-radius: 50%;
+  background-color: rgb(63, 152, 224);
+}
+.parte-izquierda .parte-superior-izquierda .foco .azul-claro {
+  display: flex;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 8%;
+  left: 15%;
+  border-radius: 50%;
+  background-color: rgb(100, 181, 247);
+}
+.parte-izquierda .parte-superior-izquierda .foco .azul-blanco {
+  display: flex;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 11%;
+  left: 19%;
+  border-radius: 50%;
+  background-color: rgb(169, 206, 236);
+}
+
+.contenedor-focos {
+  display: flex;
+  position: absolute;
+  width: 25%;
+  height: 30%;
+  top: 5%;
+  left: 65%;
+}
+.leds {
+  display: flex;
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+.color3 {
+  background-color: brown;
+  box-shadow: 0 0 5px grey;
+}
+.color2 {
+  background-color: yellow;
+  box-shadow: 0 0 5px grey;
+}
+.color1 {
+  background-color: green;
+  box-shadow: 0 0 5px grey;
+}
+.leds > div {
+  display: flex;
+  position: relative;
+  height: 30%;
+  width: 25%;
+  top: 10%;
+  left: 15%;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+/********
+POKEDEX IZQUIERDO FONDO
+********/
+.fondo-contenedor {
+  display: flex;
+  position: absolute;
+  width: 93%;
+  height: 80%;
+  left: 1vw;
+  top: 14.5%;
+
+  border-bottom-left-radius: 2vw;
+  border: solid 4px black;
+  border-top: solid 4px black;
+  background-color: brown;
+}
+.relieve {
+  display: flex;
+  position: absolute;
+  width: 56%;
+  height: 8.6%;
+  top: 6.9%;
+  left: 11vw;
+
+  border-top-left-radius: 4vw;
+  border-top: solid 4px black;
+  border-right: solid 4px black;
+  background-color: brown;
+}
+.form {
+  display: flex;
+  position: absolute;
+  width: 10vw;
+  height: 5%;
+  left: 50%;
+  top: 10%;
+  border-bottom: solid 3px gray;
+  border-left: solid 2px gray;
+}
+.form .input {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px grey;
+}
+
+.background-display {
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 50%;
+  top: 5%;
+  margin: 0 auto;
+  border-radius: 12px;
+  border-bottom-left-radius: 25%;
+  background-color: rgb(94, 94, 94);
+}
+.background-display .contotorno-display {
+  display: flex;
+  position: relative;
+  width: 96.9%;
+  height: 95.9%;
+  left: 3%;
+  border-radius: 12px;
+  border-bottom-left-radius: 25%;
+  justify-content: center;
+
+  background-color: rgb(206, 206, 206);
+}
+.nomPoke {
+  display: flex;
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+  width: 63%;
+  font-size: 2vh;
+  border: none;
+  text-transform: capitalize;
+  font-family: "PokémonNombres";
+  background-color: rgb(206, 206, 206);
+}
+.background-display .display {
+  display: flex;
+  position: absolute;
+  width: 75%;
+  height: 65%;
+  top: 12.5%;
+  left: 15%;
+  justify-content: center;
+
+  border-radius: 12px;
+  border-right: solid 3px grey;
+  border-top: solid 3px grey;
+  z-index: 2;
+  background-color: rgb(255, 246, 232);
+}
+
+.background-btn {
+  display: flex;
+  position: absolute;
+  width: 25%;
+  height: 20%;
+  bottom: 20%;
+  left: 5%;
+  border-radius: 50%;
+
+  box-shadow: 0 0 5px grey;
+  background-color: rgb(2, 2, 2);
+}
+.btn-encendido {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 7%;
+  bottom: 10%;
+  border-radius: 50%;
+
+  background-color: rgb(27, 27, 27);
+}
+.background-leds {
+  display: flex;
+  position: absolute;
+  width: 10%;
+  height: 5%;
+  bottom: 30%;
+  left: 40%;
+
+  border-radius: 20%;
+  box-shadow: 0 0 5px grey;
+  background-color: rgb(2, 2, 2);
+}
+.background-leds2 {
+  display: flex;
+  position: absolute;
+  width: 10%;
+  height: 5%;
+  bottom: 30%;
+  left: 55%;
+
+  border-radius: 20%;
+  box-shadow: 0 0 5px grey;
+  background-color: rgb(2, 2, 2);
+}
+.btn-leds {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  bottom: 50%;
+  border-radius: 10%;
+  background-color: rgb(255, 255, 255);
+}
+.btn-leds2 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  bottom: 50%;
+  border-radius: 10%;
+  background-color: rgb(255, 255, 255);
+}
+
+.background-btn-display {
+  display: flex;
+  position: absolute;
+  width: 35%;
+  height: 18%;
+  bottom: 5%;
+  left: 32%;
+
+  border-radius: 10%;
+  box-shadow: 0 0 5px greenyellow;
+  background-color: green;
+}
+
+.radar {
+  display: flex;
+  position: absolute;
+  width: 99%;
+  height: 90%;
+  bottom: 5%;
+
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10%;
+  font-family: "PokémonNombres";
+  font-size: 1vw;
+  box-shadow: 0 0 5px greenyellow;
+  background-color: green;
+}
+
+.backgroun-joysticks {
+  display: flex;
+  position: absolute;
+  height: 80px;
+  width: 20px;
+  bottom: 13%;
+  left: 81%;
+
+  box-shadow: 0 0 5px black;
+  background-color: black;
+}
+.backgroun-joysticks::after {
+  content: "";
+  height: 20%;
+  left: -150%;
+  position: absolute;
+  top: 38%;
+  width: 400%;
+
+  box-shadow: 0 0 5px black;
+  background-color: black;
+}
+/****
+POKEDEX CENTRO
+********/
+.parte-central {
+  display: flex;
+  position: relative;
+  margin: 2.5vw 0 0.25vw 0;
+
+  background-color: red;
+  border: solid 2px black;
+}
+.parte-central .sombra-paralela {
+  display: flex;
+  position: relative;
+  width: 20%;
+  height: 100%;
+  left: 0;
+
+  background-color: brown;
+}
+/********
+REMACHE SUPERIOR
+********/
+.parte-central .remacahe-superior {
+  display: flex;
+  position: absolute;
+  top: 2.8%;
+  width: 100%;
+  height: 4%;
+
+  background-color: black;
+}
+.parte-central .sombra-paralela .remacahe-superior {
+  display: flex;
+  position: absolute;
+  top: 2.8%;
+  width: 100%;
+  height: 4%;
+
+  background-color: black;
+}
+/********
+REMACHE INFERIOR
+********/
+.parte-central .remacahe-inferior {
+  display: flex;
+  position: absolute;
+  top: 92.5%;
+  width: 100%;
+  height: 4%;
+
+  background-color: black;
+}
+.parte-central .sombra-paralela .remacahe-inferior {
+  display: flex;
+  position: absolute;
+  top: 92.5%;
+  width: 100%;
+  height: 4%;
+
+  background-color: black;
+}
+/********
+POKEDEX DERECHO
+********/
+
+.parte-derecha {
+  display: flex;
+  position: relative;
+  margin: 7.5vw 0 1.5vw 0;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+
+  background-color: brown;
+}
+
+.parte-derecha .parte-superior-derecha {
+  display: flex;
+  position: absolute;
+  width: 15.28vw;
+  height: 16%;
+  top: -4vw;
+  border-top-right-radius: 5vw;
+
+  background-color: brown;
+}
+
+.parte-derecha .parte-superior-derecha .relieve-derecho {
+  display: flex;
+  position: absolute;
+  width: 14.9vw;
+  height: 98.5%;
+  top: 0.4vw;
+  border-top-right-radius: 4vw;
+
+  background-color: red;
+}
+
+.parte-derecha .mitad-derecha {
+  display: flex;
+  position: absolute;
+  width: 23.5vw;
+  height: 99%;
+  top: 0.5vw;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+
+  background-color: red;
+}
+
+.datos {
+  display: block;
+
+  position: absolute;
+  left: 10%;
+  height: 80%;
+  width: 40%;
+  top: 5%;
+  text-align: center;
+  border-bottom: 5px solid black;
+  background-color: beige;
+}
+.datos-div::before {
+  content: "";
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+
+  box-shadow: 0 0 3px black;
+  background-color: black;
+}
+.datos-div {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  
+  background-color: brown;
+  
+}
+input {
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+}
+.datos p {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 17%;
+  color: white;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2vh;
+}
+form {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 95%;
+  top: 0;
+  padding: 0.5em;
+  
+}
+form input {
+  width: 90%;
+
+
+  -webkit-appearance: none;
+  background: #111;
+ 
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 0.1px;
+  height: 0.1px;
+  
+  background: #111;
+
+  box-shadow: -407px 0 0 400px red;
+}
+.colorPS::-webkit-slider-thumb{
+  box-shadow: -407px 0 0 400px red;
+}
+.colorATAK::-webkit-slider-thumb{
+  box-shadow: -407px 0 0 400px green;
+}
+.colorDEF::-webkit-slider-thumb{
+  box-shadow: -407px 0 0 400px #003a70;
+}
+.colorSPATAK::-webkit-slider-thumb{
+  box-shadow: -407px 0 0 400px rgb(238, 182, 182);
+}
+.colorSPDEF::-webkit-slider-thumb{
+  box-shadow: -407px 0 0 400px blueviolet;
+}
+.colorSPEED::-webkit-slider-thumb{
+  box-shadow: -407px 0 0 400px yellow;
+}
+/********
+FONTS
+********/
+
+@font-face {
+  font-family: "Pokémon";
+  src: url("../font/Pokemon\ Solid.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "PokémonNombres";
+  src: url("../font/SetFireToTheRain.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/********
+RESPONSIVE
+********/
+
+@media screen and (max-width: 1260px) {
+  body {
+    height: 100vh;
+    background-image: url(../img/backgroundLaptops.jpg);
+    background-position: right;
+  }
+  .section-pokedex {
+    width: 53%;
+    height: 60vw;
+    margin: 5% 10% 0 10%;
+  }
+  .section-pokedex h1 {
+    -webkit-text-stroke: 3px #003a70;
+  }
+  .datos {
+    display: block;
+  
+    position: absolute;
+    left: 10%;
+    width: 50%;
+    height: 75%;
+}
+.nomPoke{
+  height: 0.5%;
+ }
+ .contenedor-focos{
+   left: 70%;
+ }
+}
+@media screen and (max-width: 1136px) {
+  body {
+    height: 100vh;
+    background-image: url(../img/backgroundLaptops.jpg);
+    background-position: right;
+  }
+  .section-pokedex {
+    width: 83%;
+    height: 80vw;
+    margin: 0 auto;
+  }
+  .section-pokedex h1 {
+    -webkit-text-stroke: 3px #003a70;
+  }
+  .parte-izquierda .mitad-izquierda {
+    width: 100%;
+  }
+  .parte-derecha .mitad-derecha {
+    width: 98%;
+  }
+  .relieve {
+    width: 69.3%;
+  }
+  .form{
+    width: 50%;
+    left: 35%;
+  }
+  .nomPoke{
+   height: 15%;
+  }
+  .radar{
+    font-size: 100%;
+  }
+  .contenedor-focos{
+    left: 120%;
+  }
+}
+@media screen and (max-width: 920px) {
+  body {
+    height: 100vh;
+    background-image: url(../img/backgroundTablets.jpg);
+    background-position: center;
+  }
+  .section-pokedex {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+  }
+  .section-pokedex h1 {
+    -webkit-text-stroke: 3px #003a70;
+  }
+  .parte-izquierda .mitad-izquierda {
+    width: 100%;
+  }
+  .parte-derecha .mitad-derecha {
+    width: 98%;
+  }
+  .radar{
+    font-size: 1.5vw;
+  }
+  .relieve {
+    width: 71.3%;
+  }
+  .contenedor-focos{
+    left: 130%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    height: 100vh;
+    background-image: url(../img/backgroundPhone.jpg);
+    background-position: right;
+  }
+  .section-pokedex {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+  }
+  .section-pokedex h1 {
+    -webkit-text-stroke: 3px #003a70;
+  }
+  .parte-izquierda .mitad-izquierda {
+    width: 100%;
+  }
+  .parte-derecha .mitad-derecha {
+    width: 98%;
+  }
+  .datos{
+    width: 80%;
+  }
+  .section-pokedex h1 {
+    font-size: 10vw;
+    -webkit-text-stroke: 1px #003a70;
+  }
+  .fondo-contenedor{
+    width: 98%;
+    height: 80%;
+    left: 0;
+  }
+  .backgroun-joysticks{
+    height: 10%;
+    width: 10%;
+    bottom: 30%;
+    left: 72%;
+  }
+  .background-btn-display{
+    width: 80%;
+    height: 15%;
+    bottom: 10%;
+    left: 10%;
+  }
+  .background-btn{
+    width: 30%;
+    height: 10%;
+    bottom: 30%;
+    left: 5%;
+  }
+  .background-leds {
+    display: none;
+  }
+  .background-leds2{
+    display: none;
+  }
+  .background-display{
+    width: 100%;
+  }
+  .radar{
+    font-size: 4vw;
+  }
+  .contenedor-focos{
+    left: 100%;
+    width: 50%;
+  }
+}
+

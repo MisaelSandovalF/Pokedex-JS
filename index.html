@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>POKEDEX</title>
+  </head>
+  <body>
+    <section class="section-pokedex">
+      <h1>Pokémon</h1>
+
+      <div class="contenedor-pokedex">
+        <div class="parte-izquierda">
+          <div class="mitad-izquierda">
+            <div class="parte-superior-izquierda">
+              <div class="contenedor-led">
+                <div class="foco">
+                  <div class="azul-fuerte"></div>
+                  <div class="azul-claro"></div>
+                  <div class="azul-blanco"></div>
+                </div>
+              </div>
+              <div class="contenedor-focos">
+                <div class="leds color1"><div></div></div>
+                <div class="leds color2"><div></div></div>
+                <div class="leds color3"><div></div></div>
+              </div>
+            </div>
+
+            <div class="fondo-contenedor">
+              <div class="background-display">
+                <div class="contotorno-display">
+                  <input
+                    class="nomPoke"
+                    type="text"
+                    id="nombre"
+                    placeholder=" "
+                  />
+                </div>
+
+                <div class="display">
+                  <img src="img/pokeball.png" id="pokeImg" />
+                </div>
+              </div>
+              <div class="background-btn">
+                <div class="btn-encendido" onclick="fetchPokemon()"></div>
+              </div>
+
+              <div class="background-leds">
+                <div class="btn-leds"></div>
+              </div>
+
+              <div class="background-leds2">
+                <div class="btn-leds2"></div>
+              </div>
+
+              <div class="background-btn-display">
+                <input class="radar" type="text" id="tipo" placeholder="TIPO" />
+              </div>
+              <div class="backgroun-joysticks">
+                <div class="btn-joysticks"></div>
+              </div>
+            </div>
+            <div class="relieve"></div>
+            <div class="form">
+              <input
+                class="input"
+                type="text"
+                id="pokeName"
+                name="pokeName"
+                placeholder="INGRESA UN POKÉMON"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="parte-central">
+          <div class="remacahe-superior"></div>
+          <div class="remacahe-inferior"></div>
+          <div class="sombra-paralela">
+            <div class="remacahe-superior"></div>
+            <div class="remacahe-inferior"></div>
+          </div>
+        </div>
+        <div class="parte-derecha">
+          <div class="parte-superior-derecha">
+            <div class="relieve-derecho">
+              <div class="tipo1"></div>
+              <div class="tipo2"></div>
+            </div>
+          </div>
+          <div class="mitad-derecha">
+            <div class="datos">
+              <div class="datos-div">
+                <form>
+              <p>
+                PS: <br /><input class="range colorPS"
+                  type="range"
+                  id="ps"
+                  min="0"
+                  max="200"
+                  value="0"
+                />
+              </p>
+              <p>ATK: <br /><input class="range colorATAK"
+                type="range"
+                id="atk"
+                min="0"
+                max="255"
+                value="0"
+              
+              />
+            </p>
+              <p>DEF: <br /><input class="range colorDEF"
+                type="range"
+                id="def"
+                min="0"
+                max="255"
+                value="0"
+              /></p>
+              <p>
+                SP.ATAK: <br /><input class="range colorSPATAK"
+                type="range"
+                id="spatak"
+                min="0"
+                max="255"
+                value="0"
+              />
+              </p>
+              <p>
+                SP.DEF: <br /><input class="range colorSPDEF"
+                type="range"
+                id="spdef"
+                min="0"
+                max="255"
+                value="0"
+              />
+              </p>
+              <p>
+                SPEED: <br /><input class="range colorSPEED"
+                type="range"
+                id="speed"
+                min="0"
+                max="255"
+                value="0"
+              />
+              </p>
+            </form>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pokeMovimientos" class="container-moves"></div>
+    </section>
+    <footer>
+      <script src="js/pokedex.js"></script>
+    </footer>
+  </body>
+</html>
